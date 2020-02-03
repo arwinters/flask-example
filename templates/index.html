@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>-->
+<html>
+<body>
+<head>
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+</head>
+
+<div>
+  <h2>Toggle JavaScript Example</h2>
+  <table>
+    <tr>
+      <td>Javascript</td>
+      <td><input type="checkbox" class='toggle' checked data-toggle="toggle"></td>
+    </tr>
+  </table>
+  <div>
+    <div class='status'>Toggled</div>
+  </div>
+</div>
+
+<div>
+  <h2>Form Example</h2>
+  <form method="POST">
+    Firstname: <input type="text" name="firstname"><br>
+    Lastname: <input type="text" name="lastname"><br>
+    <input type="submit" value="Submit"><br>
+  </form>
+</div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $('.toggle').click(function () {
+            var current_status = $('.status').text();
+            if (current_status === 'Untoggled') {
+                $('.status').html('Toggled');
+            } else {
+                $('.status').html('Untoggled');
+            }
+
+        });
+    });
+</script>
+</html>
